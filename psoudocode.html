@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>::Ali Mini Quiz::</title>
+  </head>
+  <body>
+    <h2><p>Psoudocode Ali Mini Quiz</h2></p>
+    <ol><p><li>Welcome page</li>
+        <p><li>siapkan quizConstructor</lo></p>
+        <ul><li>asign variable (idquestion,question, answer,choice1,choice2,choice3,choice4, enabled, asked)</li></ul>
+        <p><li>siapkan new array bank soal beri nama quiz</lo></p>
+        <ul><li>gunakan quizConstructor untuk mengassign isi</li>
+            <li>enable beberapa soal agar soal bisa diacak</li>
+            <li>assign dan simpan bank soal kedalam array quiz</li></ul>
+    <li><p>lakukan pengecekan bank soal yang telah disimpan</li></p>
+       <ul><li>assign dan simpan vairiable numEnabled=0</li>
+          <li>assign dan simpan vairiable i=0</li>
+          <li>lakukan pengulangan jika i < array bank soal i++</li>
+          <li>numEnabled++</li></ul>
+    <p><li>lakukan generateQuestions (pengacakan soal)</li></p>
+       <ul><li>assign dan simpan variable i=0</li>
+          <li>lakukan pengulangan apabila i < numEnabled i++</li>
+          <li>lakukan pengecekan soal yang pernah dibaca</li>
+          <ul><li>do variable randomNum = Math.floor(Math.random() * quiz.length)</li>
+              <li>while (quiz[randomNum].enabled == false || quiz[randomNum].asked == 1)</li></ul>
+          <li>assign variable question =quiz[randomNum].question + " Ibukota Provinsinya Adalah?"</li>
+          <li>tampilkan question pada halaman web</li>
+          <li>tampilan pilihan jawaban pada halaman web</li>
+          <li>assign dan simpan variable idquestions</li>
+          <li>jika (idquestions==='') maka idquestions+=quiz[randomNum].idquestion</li>
+          <li>else idquestions+='|'+quiz[randomNum].idquestion</li>
+          <li>tandai asked++ yang sudah ditanya</li>
+          <li>tampilakan tombol untuk melihat hasil dengan id returnScore</li></ul>
+    <p><li>assign dan simpan pilihan jawaban</li></p>
+    <p><li>klik tombol Check Hasil untuk mengecek hasil</li></p>
+    <p><li>buat function untuk  melakukan pengecekan hasil beri nama returnScore</li></p>
+       <ul><li>panggil function getScore untuk menghitung hasil</li>
+          <li>tampilkan hasil ke halaman web</li>
+          <li>tampilkan tombol restart beri id restart</li></ul>
+    <p><li>buat function untuk mendapatkan score beri nama getScore</li></p>
+       <ul><li>assign dan simpan variable temp = idquestions.split('|')</li>
+          <li>assign dan simpan variable i=0</li>
+          <li>assign dan simpan variable correctAnswer=0</li>
+          <li>assign dan simpan variable wrongAnswer=jumlah soal yang ditanya</li>
+          <li>lakukan pengulangan jika i<=temp.length-1 i++</li>
+          <li>jika funtion getCheckedValue("choice"+temp[i])=== function getCheckedAnswer(temp[i]) maka</li>
+          <li>correctAnswer++ wrongAnswer--</li>
+          <li>return return correctAnswer</li></ul>
+   <p><li>buat function untuk mengecek value yang dipilih pada pilihan jawaban beri nama getCheckedValue beri variable radioname</li></p>
+       <ul><li>assign dan simpan variable radios = document.getElementsByName( radioName )</li>
+          <li>assign dan simpan notAnswered = jumlah soal yang ditanya</li>
+          <li>assign dan simpan variable y=0</li>
+          <li>jika y<=radios.length-1 y++</li>
+          <li>jika (radios[y].checked) maka return radios[y].value dan kurangi nilai notAnswered--</li></ul>
+    <p><li>buat function untuk mengembil value dari bank soal (quiz) beri nama getCheckedAnswer beri variable idquestion</li></p>
+          <ul><li>assign dan simpan variable i=0</li>
+          <li>jika i<=quiz.length-1 i++</li>
+          <li>jika idquestion==quiz[i].idquestion maka return quiz[i].answer</li></ul>
+    <p><li>buat function untuk mengulang soal</li></p>
+          <ul><li>masukan perintah window.location.href ="index.html"</li></ul>
+  </ol>
+  </body>
+</html>
